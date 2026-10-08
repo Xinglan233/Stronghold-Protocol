@@ -1,0 +1,529 @@
+{
+  "baseline": "3eced7bdba5aae11a325bd3dbe66cdf01361d2bd",
+  "fix": "93e8590c4b21682aa7bba8e97c0faff2621ce551",
+  "scope": "actual Mac Chrome, headless, 1920x1080, DOM fallback; no optional art, Spine or WebGL claim; deployment only, no scroll consumption claim",
+  "entries": [
+    {
+      "label": "final-before",
+      "port": 54106,
+      "browser": "Chrome/154.0.8037.98",
+      "seed": 1,
+      "flow": "natural solo standard R1; normal timers; no inventory fixtures",
+      "piece": {
+        "uid": 1,
+        "kind": "chess",
+        "id": "chess_char_1_09_a",
+        "golden": false,
+        "tier": 1,
+        "items": [],
+        "count": 1,
+        "ownerUid": null,
+        "row": 9,
+        "col": 3,
+        "name": "跃跃",
+        "view": "fallback"
+      },
+      "passed": true,
+      "cleanup": {
+        "browserConnected": false,
+        "serverListening": false,
+        "closedAt": "2026-10-08T11:02:05.781Z"
+      },
+      "pageErrors": [],
+      "optionalAssetDiagnostics": 395,
+      "cases": [
+        {
+          "kind": "no-direction-enter",
+          "focus": {
+            "tag": "BUTTON",
+            "class": "fwheel__cancel",
+            "cancel": true
+          },
+          "unchanged": true,
+          "requests": [],
+          "beforeServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          },
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          }
+        },
+        {
+          "kind": "mouse-cancel",
+          "focus": {
+            "tag": "BODY",
+            "class": "",
+            "cancel": false
+          },
+          "unchanged": true,
+          "requests": [],
+          "beforeServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          },
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          }
+        },
+        {
+          "kind": "escape",
+          "focus": {
+            "tag": "BODY",
+            "class": "",
+            "cancel": false
+          },
+          "unchanged": true,
+          "requests": [],
+          "beforeServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          },
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          }
+        },
+        {
+          "kind": "preview-cancel-enter",
+          "focus": {
+            "tag": "BUTTON",
+            "class": "fwheel__cancel",
+            "cancel": true
+          },
+          "unchanged": false,
+          "requests": [
+            {
+              "uid": 1,
+              "to": {
+                "area": "board",
+                "row": 9,
+                "col": 3,
+                "dir": "RIGHT"
+              },
+              "dir": "RIGHT",
+              "t": "g.move"
+            }
+          ],
+          "beforeServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          },
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "board": [
+              {
+                "uid": 1,
+                "row": 9,
+                "col": 3,
+                "dir": "RIGHT"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "normal-arrow-enter",
+          "requests": [
+            {
+              "uid": 1,
+              "to": {
+                "area": "board",
+                "row": 9,
+                "col": 3,
+                "dir": "UP"
+              },
+              "dir": "UP",
+              "t": "g.move"
+            }
+          ],
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "board": [
+              {
+                "uid": 1,
+                "row": 9,
+                "col": 3,
+                "dir": "UP"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "final-after",
+      "port": 54844,
+      "browser": "Chrome/154.0.8037.98",
+      "seed": 1,
+      "flow": "natural solo standard R1; normal timers; no inventory fixtures",
+      "piece": {
+        "uid": 1,
+        "kind": "chess",
+        "id": "chess_char_1_09_a",
+        "golden": false,
+        "tier": 1,
+        "items": [],
+        "count": 1,
+        "ownerUid": null,
+        "row": 9,
+        "col": 3,
+        "name": "跃跃",
+        "view": "fallback"
+      },
+      "passed": true,
+      "cleanup": {
+        "browserConnected": false,
+        "serverListening": false,
+        "closedAt": "2026-10-08T11:04:48.660Z"
+      },
+      "pageErrors": [],
+      "optionalAssetDiagnostics": 393,
+      "cases": [
+        {
+          "kind": "no-direction-enter",
+          "focus": {
+            "tag": "BUTTON",
+            "class": "fwheel__cancel",
+            "cancel": true
+          },
+          "unchanged": true,
+          "requests": [],
+          "beforeServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          },
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          }
+        },
+        {
+          "kind": "mouse-cancel",
+          "focus": {
+            "tag": "BODY",
+            "class": "",
+            "cancel": false
+          },
+          "unchanged": true,
+          "requests": [],
+          "beforeServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          },
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          }
+        },
+        {
+          "kind": "escape",
+          "focus": {
+            "tag": "BODY",
+            "class": "",
+            "cancel": false
+          },
+          "unchanged": true,
+          "requests": [],
+          "beforeServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          },
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          }
+        },
+        {
+          "kind": "preview-cancel-enter",
+          "focus": {
+            "tag": "BUTTON",
+            "class": "fwheel__cancel",
+            "cancel": true
+          },
+          "unchanged": true,
+          "requests": [],
+          "beforeServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          },
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              {
+                "uid": 1,
+                "id": "chess_char_1_09_a"
+              }
+            ],
+            "board": []
+          }
+        },
+        {
+          "kind": "normal-arrow-enter",
+          "requests": [
+            {
+              "uid": 1,
+              "to": {
+                "area": "board",
+                "row": 9,
+                "col": 3,
+                "dir": "UP"
+              },
+              "dir": "UP",
+              "t": "g.move"
+            }
+          ],
+          "afterServer": {
+            "hand": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "board": [
+              {
+                "uid": 1,
+                "row": 9,
+                "col": 3,
+                "dir": "UP"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
