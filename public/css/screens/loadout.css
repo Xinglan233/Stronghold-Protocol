@@ -577,3 +577,7 @@
 .lo-io__text:focus { border-color: var(--mint-700); }
 .lo-io__text::placeholder { color: var(--text-lo); }
 .lo-io__file { display: none; }
+
+.lo-yituliu__label { display: block; margin-top: 12px; font-size: max(.18rem, 12px); }
+.lo-yituliu__token { width: 100%; box-sizing: border-box; margin: 8px 0; padding: 10px; background: rgba(0, 0, 0, .22); color: var(--text-hi); border: 1px solid var(--mint-700); border-radius: 4px; }
+.lo-yituliu__result { margin-top: 12px; font-size: max(.18rem, 12px); line-height: 1.55; overflow-wrap: anywhere; }

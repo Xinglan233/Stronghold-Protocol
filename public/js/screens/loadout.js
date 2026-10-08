@@ -34,6 +34,7 @@ import {
 import { loadoutStore, openLoadout, closeLoadout, setEntries, applyLoadoutEntries, setNotOwned, applyOwnershipImport, setDiyPicks, applyDiyImport } from '../ui/loadoutSync.js';
 import { setOwned, notOwnedCount, serializeOwnership, parseOwnershipImport, OWNERSHIP_IMPORT_MAX_BYTES } from '../ui/ownershipModel.js';
 import { OwnershipPanel, useOwnershipRoster } from './ownership.js';
+import { YituliuOwnershipDialog } from './yituliuOwnership.js';
 import { DiyPanel, diyData } from './diy.js';
 import { diyCount, sanitizeDiyPicks, setPick, serializeDiy, parseDiyImport, DIY_IMPORT_MAX_BYTES } from '../ui/diyModel.js';
 import { t, tParts, N_ } from '../../../shared/i18n.js';
@@ -649,7 +650,9 @@ function LoadoutScreen({ st }) {
       </div>
     </main>`}
   </div>
-  ${io ? html`<${Modal} open=${true} onClose=${() => setIo(null)}
+  ${io?.source === 'yituliu' ? html`<${YituliuOwnershipDialog} ready=${ready && !lost.length}
+      onClose=${() => setIo(null)} onBack=${() => setIo({ mode: 'import', kind: 'ownership', text: '' })} />`
+    : io ? html`<${Modal} open=${true} onClose=${() => setIo(null)}
       title=${ioDiy ? t(io.mode === 'export' ? '导出自选编队' : '导入自选编队')
         : io.mode === 'export' ? (ioOwn ? t('导出干员持有') : t('导出干员调配')) : (ioOwn ? t('导入干员持有') : t('导入干员调配'))}
       micro=${ioOwn ? 'OPERATOR ROSTER' : ioDiy ? 'SELF-SELECT SQUAD' : 'OPERATOR LOADOUT'}
@@ -658,6 +661,8 @@ function LoadoutScreen({ st }) {
             <${Button} variant="secondary" icon="copy" data-testid="loadout-io-copy" onClick=${ioCopy}>${t('复制')}<//>
             <${Button} variant="primary" data-testid="loadout-io-download" onClick=${ioDownload}>${t('下载文件')}<//>`
         : html`<${Button} variant="ghost" onClick=${() => setIo(null)}>${t('取消')}<//>
+            ${ioOwn ? html`<${Button} variant="secondary" data-testid="yituliu-source" disabled=${!ready || !!lost.length}
+              onClick=${() => setIo({ mode: 'import', kind: 'ownership', source: 'yituliu', text: '' })}>${t('从一图流读取')}<//>` : null}
             <${Button} variant="secondary" data-testid="loadout-io-pick" onClick=${ioPick}>${t('选择文件')}<//>
             <${Button} variant="primary" icon="check" data-testid="loadout-io-apply" disabled=${!ioText.trim() || !ready} onClick=${ioApply}>${t('导入')}<//>`}>
       <p class="lo-io__hint">${ioDiy
